@@ -1,0 +1,245 @@
+@font-face {
+  font-family: "AntoineDropCapsColored";
+  src: url("/fonts/AntoineDropCapsColored.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0041-005A; /* Only load for uppercase letters A-Z */
+}
+
+@font-face {
+  font-family: "PrinceValiant";
+  src: url("/fonts/PrinceValiant.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-prince-valiant {
+  font-family: "PrinceValiant", serif;
+  font-weight: normal;
+}
+
+.font-antoine-dropcaps {
+  font-family: "AntoineDropCapsColored", serif;
+  font-weight: normal;
+  font-display: swap;
+  text-rendering: optimizeLegibility;
+}
+
+.font-helvetica {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.medieval-border {
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.parchment-bg {
+  background: #000000;
+}
+
+.medieval-button {
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 9999px;
+  color: #ffffff;
+  font-family: "PrinceValiant", serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;
+  padding: 8px 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  min-width: 200px;
+  min-height: 60px;
+}
+
+.custom-start-button {
+  background: transparent;
+  background-image: url("/border.png");
+  background-size: 250px 90px; /* Reduced width from 300px to 250px */
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  color: #ffffff !important;
+  font-family: "PrinceValiant", serif;
+  font-size: 3rem;
+  font-weight: normal;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;
+  padding: 8px 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  min-width: 250px; /* Adjusted to match new width */
+  min-height: 90px;
+}
+
+.prince-valiant-button {
+  background: transparent !important;
+  background-image: url("/border.png") !important;
+  background-size: 320px 120px !important; /* Reduced width from 400px to 320px */
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-family: "PrinceValiant", serif;
+  font-size: 3rem;
+  font-weight: normal;
+  box-shadow: none !important;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  min-width: 320px; /* Adjusted to match new width */
+  min-height: 120px;
+}
+
+.square-button {
+  background: transparent !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 20px !important;
+  color: #ffffff !important;
+  font-family: "PrinceValiant", serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  padding: 6px 12px;
+  min-width: 150px;
+  min-height: 50px;
+}
+
+.medieval-card {
+  background: #000000;
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+}
+
+.illuminated-letter {
+  font-size: 12rem;
+  float: left;
+  line-height: 9rem;
+  margin-right: 12px;
+  margin-top: 6px;
+  font-family: "AntoineDropCapsColored", serif;
+  font-weight: normal;
+  font-display: swap;
+  text-rendering: optimizeLegibility;
+  will-change: transform;
+}
+
+.high-contrast-text {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+}
+
+.collapsible-trigger {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.collapsible-content {
+  background: #ffffff;
+  border: 3px solid #000000;
+  color: #000000;
+  font-weight: 500;
+  text-shadow: none;
+}
+
+.collapsible-content * {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+.red-accent {
+  color: #ff0000;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background: #000000;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 100%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100%;
+    --input: 0 0% 10%;
+    --ring: 0 0% 100%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Navigation/Action buttons with border.png styling */
+.btn-action {
+  background: transparent !important;
+  background-image: url("/border.png") !important;
+  background-size: 180px 50px !important; /* Set specific smaller dimensions */
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-family: "PrinceValiant", serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  padding: 6px 12px;
+  min-width: 180px; /* Adjusted to match new width */
+  min-height: 50px;
+}
